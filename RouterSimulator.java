@@ -29,9 +29,7 @@ public class RouterSimulator {
   private Random generator;
 
   private int[][] connectcosts = new int[NUM_NODES][NUM_NODES];
-//testing from laptop
-  // intellij test
-  // blablablahh
+
 
 /*****************************************************************
 ***************** NETWORK EMULATION CODE STARTS BELOW ***********
