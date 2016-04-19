@@ -29,7 +29,7 @@ public class RouterSimulator {
   private Random generator;
 
   private int[][] connectcosts = new int[NUM_NODES][NUM_NODES];
-
+//testing laptop
 
 /*****************************************************************
 ***************** NETWORK EMULATION CODE STARTS BELOW ***********
