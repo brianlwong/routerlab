@@ -1,4 +1,6 @@
+import java.io.*;
 import java.util.Random;
+import java.util.Scanner;
 
 /* ******************************************************************
 Project 4: implementing distributed, asynchronous, distance vector routing.
@@ -14,7 +16,7 @@ Output GUIs added by Ch. Schuba 2007.
 
 public class RouterSimulator {
 
-  public static final int NUM_NODES = 4;
+  public static final int NUM_NODES = 5;
   public static final int INFINITY = 999;
 
   public static final boolean LINKCHANGES = false;
@@ -82,7 +84,7 @@ should not have to, and you defeinitely should not have to modify
 
     clocktime=0.0;                /* initialize time to 0.0 */
 
-    /* set initial costs */
+    /* set initial costs
     // remember that in java everything defaults to 0
     connectcosts[0][1]=1;  
     connectcosts[0][2]=3;
@@ -95,8 +97,14 @@ should not have to, and you defeinitely should not have to modify
     connectcosts[2][3]=2;
     connectcosts[3][0]=7;
     connectcosts[3][1]=INFINITY;
-    connectcosts[3][2]=2;
-    
+    connectcosts[3][2]=2;*/
+
+    try {
+      readFile();
+    } catch (FileNotFoundException e) {
+      e.printStackTrace();
+    }
+
     nodes = new RouterNode[NUM_NODES];
     for(int i=0;i<NUM_NODES;i++)
       nodes[i] = new RouterNode(i,this,connectcosts[i]);
@@ -124,7 +132,42 @@ should not have to, and you defeinitely should not have to modify
   
   }
 
+  void readFile() throws FileNotFoundException {
+    FileInputStream stream = new FileInputStream("C:/Users/never/IdeaProjects/routerlab/test.txt");
+    BufferedReader br = new BufferedReader(new InputStreamReader(stream));
+    String line;
+    try {
+      String[] routerNodes;
+      while ((line = br.readLine()) != null) {
 
+        for (int i = 0; i < NUM_NODES; i++) {
+          routerNodes = line.split(" ");
+          for (int j = 0; j < NUM_NODES; j++) {
+            if (i == (Integer.parseInt(routerNodes[0])) && j == (Integer.parseInt(routerNodes[1]))) {
+              connectcosts[i][j] = Integer.parseInt(routerNodes[2]);
+              System.out.println("connection costs["+i+"]["+j+"]: "+ connectcosts[i][j]);
+            }
+          }
+        }
+      }
+      stream.close();
+      br.close();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    for(int i = 0; i < NUM_NODES; i++){
+      for(int j = 0; j < NUM_NODES; j++){
+        if(i == j){
+          connectcosts[i][j] = 0;
+        }
+        else if(i != j){
+          if(connectcosts[i][j] == 0){
+            connectcosts[i][j] = INFINITY;
+          }
+        }
+      }
+    }
+  }
 
   void runSimulation(){
     Event eventptr;

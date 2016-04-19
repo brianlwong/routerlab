@@ -21,8 +21,8 @@ public class RouterNode {
 
       n = space(RouterSimulator.NUM_NODES) + 4;
       System.arraycopy(costs, 0, this.costs, 0, RouterSimulator.NUM_NODES);
-      initializeTable();
-      printDistanceTable();
+
+
       int[] myDistVec = new int[RouterSimulator.NUM_NODES];
       for(int i = 0; i < RouterSimulator.NUM_NODES; i++)
           myDistVec[i] = table[i][myID];
@@ -33,6 +33,8 @@ public class RouterNode {
               this.sendUpdate(new RouterPacket(myID, i, myDistVec));
           }
       }
+      initializeTable();
+      printDistanceTable();
   }
   //--------------------------------------------------
   private int space(int n){
