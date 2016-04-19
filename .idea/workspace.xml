@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="502348d2-a2da-4015-a9b8-a6c467f8d71e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RouterSimulator.java" afterPath="$PROJECT_DIR$/RouterSimulator.java" />
     </list>
     <ignored path="routerlab.iws" />
@@ -39,8 +38,8 @@
       <file leaf-file-name="RouterSimulator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RouterSimulator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67002517">
-              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.5843829">
+              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -479,7 +478,7 @@
       <created>1461038212839</created>
       <option name="number" value="Default" />
       <updated>1461038212839</updated>
-      <workItem from="1461044461761" duration="433000" />
+      <workItem from="1461044461761" duration="541000" />
     </task>
     <task id="LOCAL-00001" summary="testing laptop">
       <created>1461044488515</created>
@@ -503,7 +502,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="433000" />
+    <option name="totallyTimeSpent" value="541000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -629,8 +628,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RouterSimulator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67002517">
-          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.5843829">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
           <folding />
         </state>
       </provider>
