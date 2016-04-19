@@ -21,9 +21,8 @@ public class RouterNode {
 
       n = space(RouterSimulator.NUM_NODES) + 4;
       System.arraycopy(costs, 0, this.costs, 0, RouterSimulator.NUM_NODES);
-
       initializeTable();
-
+      printDistanceTable();
       int[] myDistVec = new int[RouterSimulator.NUM_NODES];
       for(int i = 0; i < RouterSimulator.NUM_NODES; i++)
           myDistVec[i] = table[i][myID];
@@ -149,7 +148,7 @@ public class RouterNode {
       for(int j = 0; j < RouterSimulator.NUM_NODES; j++){
         if(costs[j] != RouterSimulator.INFINITY){
           if(table[i][j] >= RouterSimulator.INFINITY)
-            str += f.format("inf", n);
+            str += f.format(RouterSimulator.INFINITY, n);
           else
             str += f.format(table[i][j], n);
         }

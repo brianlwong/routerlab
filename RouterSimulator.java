@@ -18,6 +18,7 @@ public class RouterSimulator {
   public static final int INFINITY = 999;
 
   public static final boolean LINKCHANGES = false;
+  public static final boolean POISON = true;
 
   public int TRACE = 1;             /* for debugging */
 
