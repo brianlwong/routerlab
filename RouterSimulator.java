@@ -32,6 +32,7 @@ public class RouterSimulator {
 //testing laptop
 //test 2
 
+
 /*****************************************************************
 ***************** NETWORK EMULATION CODE STARTS BELOW ***********
 The code below emulates the layer 2 and below network environment:

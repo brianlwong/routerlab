@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="502348d2-a2da-4015-a9b8-a6c467f8d71e" name="Default" comment="" />
+    <list default="true" id="502348d2-a2da-4015-a9b8-a6c467f8d71e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RouterSimulator.java" afterPath="$PROJECT_DIR$/RouterSimulator.java" />
+    </list>
     <ignored path="routerlab.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,11 +31,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="117" column="44" selection-start-line="117" selection-start-column="44" selection-end-line="117" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4253#4254#0" expanded="true" />
-                <element signature="e#4280#4281#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -40,8 +39,8 @@
       <file leaf-file-name="RouterSimulator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RouterSimulator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5843829">
-              <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.7556675">
+              <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -52,7 +51,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="1" column="121" selection-start-line="1" selection-start-column="121" selection-end-line="1" selection-end-column="121" />
-              <folding />
+              <folding>
+                <element signature="e#408#409#0" expanded="false" />
+                <element signature="e#454#455#0" expanded="false" />
+                <element signature="e#505#506#0" expanded="false" />
+                <element signature="e#551#552#0" expanded="false" />
+                <element signature="e#604#605#0" expanded="false" />
+                <element signature="e#650#651#0" expanded="false" />
+                <element signature="e#701#702#0" expanded="false" />
+                <element signature="e#747#748#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -471,7 +479,7 @@
       <created>1461038212839</created>
       <option name="number" value="Default" />
       <updated>1461038212839</updated>
-      <workItem from="1461044461761" duration="85000" />
+      <workItem from="1461044461761" duration="388000" />
     </task>
     <task id="LOCAL-00001" summary="testing laptop">
       <created>1461044488515</created>
@@ -479,11 +487,17 @@
       <option name="project" value="LOCAL" />
       <updated>1461044488515</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="laptop test from intelliJ">
+      <created>1461044832909</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1461044832909</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85000" />
+    <option name="totallyTimeSpent" value="388000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -496,13 +510,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -528,7 +542,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="testing laptop" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing laptop" />
+    <MESSAGE value="laptop test from intelliJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="laptop test from intelliJ" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -545,11 +560,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="117" column="44" selection-start-line="117" selection-start-column="44" selection-end-line="117" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4253#4254#0" expanded="true" />
-            <element signature="e#4280#4281#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -565,7 +576,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="121" selection-start-line="1" selection-start-column="121" selection-end-line="1" selection-end-column="121" />
-          <folding />
+          <folding>
+            <element signature="e#408#409#0" expanded="false" />
+            <element signature="e#454#455#0" expanded="false" />
+            <element signature="e#505#506#0" expanded="false" />
+            <element signature="e#551#552#0" expanded="false" />
+            <element signature="e#604#605#0" expanded="false" />
+            <element signature="e#650#651#0" expanded="false" />
+            <element signature="e#701#702#0" expanded="false" />
+            <element signature="e#747#748#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -573,7 +593,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="121" selection-start-line="1" selection-start-column="121" selection-end-line="1" selection-end-column="121" />
-          <folding />
+          <folding>
+            <element signature="e#408#409#0" expanded="false" />
+            <element signature="e#454#455#0" expanded="false" />
+            <element signature="e#505#506#0" expanded="false" />
+            <element signature="e#551#552#0" expanded="false" />
+            <element signature="e#604#605#0" expanded="false" />
+            <element signature="e#650#651#0" expanded="false" />
+            <element signature="e#701#702#0" expanded="false" />
+            <element signature="e#747#748#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -588,18 +617,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="117" column="44" selection-start-line="117" selection-start-column="44" selection-end-line="117" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4253#4254#0" expanded="true" />
-            <element signature="e#4280#4281#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RouterSimulator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5843829">
-          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.7556675">
+          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
           <folding />
         </state>
       </provider>
