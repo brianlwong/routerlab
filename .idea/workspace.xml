@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="502348d2-a2da-4015-a9b8-a6c467f8d71e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RouterNode.java" afterPath="$PROJECT_DIR$/RouterNode.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/routerlab/Event.class" afterPath="$PROJECT_DIR$/out/production/routerlab/Event.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/routerlab/RouterSimulator.class" afterPath="$PROJECT_DIR$/out/production/routerlab/RouterSimulator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RouterSimulator.java" afterPath="$PROJECT_DIR$/RouterSimulator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/routerlab/test.txt" afterPath="$PROJECT_DIR$/out/production/routerlab/test.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.txt" afterPath="$PROJECT_DIR$/test.txt" />
     </list>
     <ignored path="routerlab.iws" />
@@ -40,12 +43,12 @@
       <file leaf-file-name="RouterSimulator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RouterSimulator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8977956">
-              <caret line="163" column="38" selection-start-line="163" selection-start-column="38" selection-end-line="163" selection-end-column="38" />
+            <state vertical-scroll-proportion="1.9338677">
+              <caret line="83" column="62" selection-start-line="83" selection-start-column="62" selection-end-line="83" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6661#6662#0" expanded="true" />
-                <element signature="e#6687#6688#0" expanded="true" />
+                <element signature="e#6227#6228#0" expanded="true" />
+                <element signature="e#6253#6254#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -649,7 +652,7 @@
       <updated>1461038212839</updated>
       <workItem from="1461044461761" duration="1858000" />
       <workItem from="1461048535522" duration="94000" />
-      <workItem from="1461048660684" duration="7928000" />
+      <workItem from="1461048660684" duration="8813000" />
     </task>
     <task id="LOCAL-00001" summary="testing laptop">
       <created>1461044488515</created>
@@ -709,7 +712,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9880000" />
+    <option name="totallyTimeSpent" value="10765000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -726,7 +729,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -793,8 +796,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6661#6662#0" expanded="true" />
-            <element signature="e#6687#6688#0" expanded="true" />
+            <element signature="e#6227#6228#0" expanded="true" />
+            <element signature="e#6253#6254#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -829,8 +832,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6661#6662#0" expanded="true" />
-            <element signature="e#6687#6688#0" expanded="true" />
+            <element signature="e#6227#6228#0" expanded="true" />
+            <element signature="e#6253#6254#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -865,8 +868,8 @@
           <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6661#6662#0" expanded="true" />
-            <element signature="e#6687#6688#0" expanded="true" />
+            <element signature="e#6227#6228#0" expanded="true" />
+            <element signature="e#6253#6254#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -901,8 +904,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6661#6662#0" expanded="true" />
-            <element signature="e#6687#6688#0" expanded="true" />
+            <element signature="e#6227#6228#0" expanded="true" />
+            <element signature="e#6253#6254#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -929,8 +932,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6661#6662#0" expanded="true" />
-            <element signature="e#6687#6688#0" expanded="true" />
+            <element signature="e#6227#6228#0" expanded="true" />
+            <element signature="e#6253#6254#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -957,8 +960,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6661#6662#0" expanded="true" />
-            <element signature="e#6687#6688#0" expanded="true" />
+            <element signature="e#6227#6228#0" expanded="true" />
+            <element signature="e#6253#6254#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -976,13 +979,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="121" selection-start-line="1" selection-start-column="121" selection-end-line="1" selection-end-column="121" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/routerlab/RouterSimulator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1014,12 +1010,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RouterSimulator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8977956">
-          <caret line="163" column="38" selection-start-line="163" selection-start-column="38" selection-end-line="163" selection-end-column="38" />
+        <state vertical-scroll-proportion="1.9338677">
+          <caret line="83" column="62" selection-start-line="83" selection-start-column="62" selection-end-line="83" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6661#6662#0" expanded="true" />
-            <element signature="e#6687#6688#0" expanded="true" />
+            <element signature="e#6227#6228#0" expanded="true" />
+            <element signature="e#6253#6254#0" expanded="true" />
           </folding>
         </state>
       </provider>

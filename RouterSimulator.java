@@ -65,7 +65,6 @@ should not have to, and you defeinitely should not have to modify
 
   RouterSimulator()                         /* initialize the simulator */
   {
-    double sum, avg;
     Event evptr;  
     long seed = 1234;
 
@@ -83,22 +82,6 @@ should not have to, and you defeinitely should not have to modify
     generator = new Random(seed);
 
     clocktime=0.0;                /* initialize time to 0.0 */
-
-    /* set initial costs
-    // remember that in java everything defaults to 0
-    connectcosts[0][1]=1;  
-    connectcosts[0][2]=3;
-    connectcosts[0][3]=7;
-    connectcosts[1][0]=1;
-    connectcosts[1][2]=1;
-    connectcosts[1][3]=INFINITY;
-    connectcosts[2][0]=3;  
-    connectcosts[2][1]=1;
-    connectcosts[2][3]=2;
-    connectcosts[3][0]=7;
-    connectcosts[3][1]=INFINITY;
-    connectcosts[3][2]=2;*/
-
     try {
       readFile();
     } catch (FileNotFoundException e) {
