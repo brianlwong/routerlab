@@ -85,7 +85,7 @@ should not have to, and you defeinitely should not have to modify
 
     Scanner input = new Scanner(System.in);
     //asking user to input text file address
-    System.out.println("Enter the file path of the plain text file");
+    System.out.println("Enter the file path of the plain text test file");
     try {
       String s = input.next();
       FileInputStream stream = new FileInputStream(s);
@@ -126,6 +126,7 @@ should not have to, and you defeinitely should not have to modify
     String line;
     try {
       String[] routerNodes;
+      System.out.println("\n\nData being read from file:");
       while ((line = br.readLine()) != null) {
 
         for (int i = 0; i < NUM_NODES; i++) {
@@ -186,7 +187,7 @@ should not have to, and you defeinitely should not have to modify
       clocktime = eventptr.evtime;    /* update time to next event time */
       if (eventptr.evtype == FROM_LAYER2 ) {
 	if(eventptr.eventity >=0 && eventptr.eventity < NUM_NODES)
-	  nodes[eventptr.eventity].recvUpdate(eventptr.rtpktptr);
+	  nodes[eventptr.eventity].receiveUpdate(eventptr.rtpktptr);
 	else { myGUI.println("Panic: unknown event entity\n"); System.exit(0); }
       }
       else if (eventptr.evtype == LINK_CHANGE ) {
@@ -201,7 +202,7 @@ should not have to, and you defeinitely should not have to modify
       
       if(TRACE > 2)
 	for(int i=0;i<NUM_NODES;i++)
-	  nodes[i].printDistanceTable();
+	  nodes[i].printGUIDistanceTable();
 
     }
     
@@ -256,7 +257,7 @@ should not have to, and you defeinitely should not have to modify
     }
   }
 
-  void printevlist()
+  /*void printevlist()
   {
     Event q;
     myGUI.println("--------------\nEvent List Follows:");
@@ -266,7 +267,7 @@ should not have to, and you defeinitely should not have to modify
 			 " entity: "+q.eventity);
     }
     myGUI.println("--------------");
-  }
+  }*/
 
 
   /************************** TOLAYER2 ***************/
