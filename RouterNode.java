@@ -15,23 +15,21 @@ public class RouterNode {
         myID = ID;
         this.sim = sim;
         myGUI =new GuiTextArea("  Router "+ ID + "  ");
+        System.arraycopy(costs, 0, this.costs, 0, RouterSimulator.NUM_NODES);
 
-              //n = space(RouterSimulator.NUM_NODES) + 4;
-              System.arraycopy(costs, 0, this.costs, 0, RouterSimulator.NUM_NODES);
+        int[] myDistVec = new int[RouterSimulator.NUM_NODES];
+
+        for(int i = 0; i < RouterSimulator.NUM_NODES; i++){
+            myDistVec[i] = table[i][myID];
+        }
 
 
-              int[] myDistVec = new int[RouterSimulator.NUM_NODES];
-              for(int i = 0; i < RouterSimulator.NUM_NODES; i++){
-                  myDistVec[i] = table[i][myID];
+        // sending distance vector to neighbors
+        for(int i = 0; i < RouterSimulator.NUM_NODES; i++){
+              if(costs[i] != RouterSimulator.INFINITY && costs[i] != 0){  // if i-th is a neighbor
+                  this.sendUpdate(new RouterPacket(myID, i, myDistVec));
               }
-
-
-              // sending distance vector to neighbors
-              for(int i = 0; i < RouterSimulator.NUM_NODES; i++){
-                  if(costs[i] != RouterSimulator.INFINITY && costs[i] != 0){  // if i-th is a neighbor
-                      this.sendUpdate(new RouterPacket(myID, i, myDistVec));
-                  }
-              }
+        }
           initializeTable();
           printGUIDistanceTable();
   }
