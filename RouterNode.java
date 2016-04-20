@@ -143,7 +143,7 @@ public class RouterNode {
     String str = "node | ";
     for(int i = 0; i < RouterSimulator.NUM_NODES; i++)
       if(costs[i] != RouterSimulator.INFINITY)
-        str += f.format(i, n);
+        str += f.format("       " + i + " | ", n);
     myGUI.println(str);
 
     str = "";
@@ -156,9 +156,9 @@ public class RouterNode {
       for(int j = 0; j < RouterSimulator.NUM_NODES; j++){
         if(costs[j] != RouterSimulator.INFINITY){
           if(table[i][j] >= RouterSimulator.INFINITY)
-            str += f.format(RouterSimulator.INFINITY, n);
+            str += f.format("   " + RouterSimulator.INFINITY + " | ", n);
           else
-            str += f.format(table[i][j], n);
+            str += f.format("       " + table[i][j] + " | ", n);
         }
       }
       myGUI.println(str);
