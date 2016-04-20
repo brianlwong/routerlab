@@ -135,7 +135,7 @@ public class RouterNode {
       //formatting display on GUI window
       spaces = space(RouterSimulator.NUM_NODES) + 4;
 	  GUI.println("Current table for " + myID + "  at time " + simulator.getClocktime());
-      String dispText = "node | ";
+      String dispText = "node | "; //buffer string for storing formatted text to send to gui
       for(int i = 0; i < RouterSimulator.NUM_NODES; i++){
           if(costs[i] != RouterSimulator.INFINITY){
               dispText += displayString.format("       " + i + " | ", spaces);

@@ -125,16 +125,16 @@ should not have to, and you defeinitely should not have to modify
     BufferedReader br = new BufferedReader(new InputStreamReader(stream));
     String line;
     try {
-      String[] routerNodes;
+      String[] routerNodes; //empty string to store split lines
       System.out.println("\n\nData being read from file:");
       while ((line = br.readLine()) != null) {
-
         for (int i = 0; i < NUM_NODES; i++) {
+          //splitting each line by " " delimiter
           routerNodes = line.split(" ");
           for (int j = 0; j < NUM_NODES; j++) {
             if (i == (Integer.parseInt(routerNodes[0])) && j == (Integer.parseInt(routerNodes[1]))) {
               connectCosts[i][j] = Integer.parseInt(routerNodes[2]);
-              //checking for correct file reading
+              //checking for correct file reading:   source     dist          connection cost
               System.out.println("connection costs[" + i + "][" + j + "]: " + connectCosts[i][j]);
             }
           }
