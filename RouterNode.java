@@ -116,18 +116,18 @@ public class RouterNode {
   public void updateLinkCost(int dest, int newCost){
       costs[dest] = newCost;
 
-      int[] myDistVec = new int[RouterSimulator.NUM_NODES];
+      int[] distVec = new int[RouterSimulator.NUM_NODES];
       for(int i = 0; i < RouterSimulator.NUM_NODES; i++){
           if( i == dest)
-              myDistVec[i] = newCost;
+              distVec[i] = newCost;
           else
-              myDistVec[i] = table[i][myID];
-          System.out.print(myDistVec[i] + " ");
+              distVec[i] = table[i][myID];
+          System.out.print(distVec[i] + " ");
       }
 
       System.out.println();
 
-      this.receiveUpdate(new RouterPacket(myID, myID, myDistVec));
+      this.receiveUpdate(new RouterPacket(myID, myID, distVec));
       System.out.println("Route to " + dest +" costs " + newCost);
   }
 
