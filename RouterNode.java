@@ -151,18 +151,18 @@ public class RouterNode {
       GUI.println(dispText);
 
       for(int i = 0; i < RouterSimulator.NUM_NODES; i++){
-            dispText = displayString.format(i, spaces +2) + " | ";
-            for(int j = 0; j < RouterSimulator.NUM_NODES; j++){
-                  if(costs[j] != RouterSimulator.INFINITY){
-                      if(table[i][j] >= RouterSimulator.INFINITY){
-                          dispText += displayString.format("   " + RouterSimulator.INFINITY + " | ", spaces);
-                      }
-                      else{
-                          dispText += displayString.format("       " + table[i][j] + " |  ", spaces);
-                      }
-                  }
-            }
-            GUI.println(dispText);
+          dispText = displayString.format(i, spaces +2) + " | ";
+          for(int j = 0; j < RouterSimulator.NUM_NODES; j++){
+                if(costs[j] != RouterSimulator.INFINITY){
+                    if(table[i][j] >= RouterSimulator.INFINITY){
+                        dispText += displayString.format("   " + RouterSimulator.INFINITY + " | ", spaces);
+                    }
+                    else{
+                        dispText += displayString.format("       " + table[i][j] + " |  ", spaces);
+                    }
+                }
+          }
+          GUI.println(dispText);
       }
   }
 

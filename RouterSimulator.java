@@ -16,7 +16,7 @@ Output GUIs added by Ch. Schuba 2007.
 
 public class RouterSimulator {
 
-  public static final int NUM_NODES = 5;
+  public static final int NUM_NODES = 6; //If test file has more than 6 nodes, there will be errors. If test file has less than 6 nodes, node(s) will be connected to nothing
   public static final int INFINITY = 999;
 
   public static final boolean LINKCHANGES = false;
@@ -30,7 +30,7 @@ public class RouterSimulator {
 
   private Random generator;
 
-  private int[][] connectcosts = new int[NUM_NODES][NUM_NODES];
+  private int[][] connectCosts = new int[NUM_NODES][NUM_NODES];
 
 
 /*****************************************************************
@@ -96,7 +96,7 @@ should not have to, and you defeinitely should not have to modify
 
     nodes = new RouterNode[NUM_NODES];
     for(int i=0;i<NUM_NODES;i++)
-      nodes[i] = new RouterNode(i,this,connectcosts[i]);
+      nodes[i] = new RouterNode(i,this, connectCosts[i]);
 
     /* initialize future link changes */
     if (LINKCHANGES)   {
@@ -133,9 +133,9 @@ should not have to, and you defeinitely should not have to modify
           routerNodes = line.split(" ");
           for (int j = 0; j < NUM_NODES; j++) {
             if (i == (Integer.parseInt(routerNodes[0])) && j == (Integer.parseInt(routerNodes[1]))) {
-              connectcosts[i][j] = Integer.parseInt(routerNodes[2]);
+              connectCosts[i][j] = Integer.parseInt(routerNodes[2]);
               //checking for correct file reading
-              System.out.println("connection costs[" + i + "][" + j + "]: " + connectcosts[i][j]);
+              System.out.println("connection costs[" + i + "][" + j + "]: " + connectCosts[i][j]);
             }
           }
         }
@@ -148,11 +148,11 @@ should not have to, and you defeinitely should not have to modify
     for(int i = 0; i < NUM_NODES; i++){
       for(int j = 0; j < NUM_NODES; j++){
         if(i == j){
-          connectcosts[i][j] = 0;
+          connectCosts[i][j] = 0;
         }
         else if(i != j){
-          if(connectcosts[i][j] == 0){
-            connectcosts[i][j] = INFINITY;
+          if(connectCosts[i][j] == 0){
+            connectCosts[i][j] = INFINITY;
           }
         }
       }
@@ -291,7 +291,7 @@ should not have to, and you defeinitely should not have to modify
       myGUI.println("WARNING: source and destination id's the same, ignoring packet!");
       return;
     }
-    if (connectcosts[packet.sourceid][packet.destid] == INFINITY)  {
+    if (connectCosts[packet.sourceid][packet.destid] == INFINITY)  {
       myGUI.println("WARNING: source and destination not connected, ignoring packet!");
       return;
     }
@@ -321,7 +321,7 @@ should not have to, and you defeinitely should not have to modify
        and 10 time units after the latest arrival time of packets
        currently in the medium on their way to the destination */
     lastime = clocktime;
-    for (q=evlist; q!=null ; q = q.next) 
+    for (q=evlist; q!=null ; q = q.next)
       if ( (q.evtype==FROM_LAYER2  && q.eventity==evptr.eventity) ) 
 	lastime = q.evtime;
     evptr.evtime =  lastime + 9*generator.nextDouble() + 1;
