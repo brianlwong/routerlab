@@ -19,7 +19,7 @@ public class RouterNode {
     this.sim = sim;
     myGUI =new GuiTextArea("  Output window for Router #"+ ID + "  ");
 
-      n = space(RouterSimulator.NUM_NODES) + 4;
+      n = space(RouterSimulator.NUM_NODES) + 5;
       System.arraycopy(costs, 0, this.costs, 0, RouterSimulator.NUM_NODES);
 
 
@@ -51,13 +51,20 @@ public class RouterNode {
       for(int i = 0; i < RouterSimulator.NUM_NODES; i++)
       {
           table[i][myID] = costs[i];
-          if(RouterSimulator.POISON) via[i] = -1;
+          if(RouterSimulator.POISON){
+              via[i] = -1;
+          }
 
-          if(RouterSimulator.POISON && costs[i] != RouterSimulator.INFINITY) // if neighbor
+          if(RouterSimulator.POISON && costs[i] != RouterSimulator.INFINITY){
+              // if neighbor
               via[i] = i;
-          for(int j = 0; j < RouterSimulator.NUM_NODES; j++)
-              if(i != j && j != myID)
+          }
+
+          for(int j = 0; j < RouterSimulator.NUM_NODES; j++){
+              if(i != j && j != myID){
                   table[i][j] = RouterSimulator.INFINITY;
+              }
+          }
       }
   }
 
@@ -116,7 +123,6 @@ public class RouterNode {
 
                   for(int j = 0; j < RouterSimulator.NUM_NODES; j++)
                       System.out.print(myDistVec[j] + " ");
-                  System.out.print("PRINT?\n");
                   this.sendUpdate(new RouterPacket(myID, i, myDistVec));
               }
           }

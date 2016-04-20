@@ -82,8 +82,14 @@ should not have to, and you defeinitely should not have to modify
     generator = new Random(seed);
 
     clocktime=0.0;                /* initialize time to 0.0 */
+
+    Scanner input = new Scanner(System.in);
+    //asking user to input text file address
+    System.out.println("Enter the file path of the plain text file");
     try {
-      readFile();
+      String s = input.next();
+      FileInputStream stream = new FileInputStream(s);
+      readFile(stream);
     } catch (FileNotFoundException e) {
       e.printStackTrace();
     }
@@ -115,8 +121,7 @@ should not have to, and you defeinitely should not have to modify
   
   }
 
-  void readFile() throws FileNotFoundException {
-    FileInputStream stream = new FileInputStream("C:/Users/never/IdeaProjects/routerlab/test.txt");
+  void readFile(FileInputStream stream) {
     BufferedReader br = new BufferedReader(new InputStreamReader(stream));
     String line;
     try {
@@ -128,7 +133,8 @@ should not have to, and you defeinitely should not have to modify
           for (int j = 0; j < NUM_NODES; j++) {
             if (i == (Integer.parseInt(routerNodes[0])) && j == (Integer.parseInt(routerNodes[1]))) {
               connectcosts[i][j] = Integer.parseInt(routerNodes[2]);
-              System.out.println("connection costs["+i+"]["+j+"]: "+ connectcosts[i][j]);
+              //checking for correct file reading
+              System.out.println("connection costs[" + i + "][" + j + "]: " + connectcosts[i][j]);
             }
           }
         }

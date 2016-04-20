@@ -2,7 +2,7 @@ import javax.swing.*;
 
 public class GuiTextArea {
     
-    JTextArea myArea;
+    JTextArea area;
 
     //--------------------
     GuiTextArea(String title) {
@@ -11,10 +11,10 @@ public class GuiTextArea {
 	JFrame frame = new JFrame(title);
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	
-	myArea = new JTextArea(20, 40);
-	myArea.setEditable(false);
+	area = new JTextArea(20, 40);
+	area.setEditable(false);
 	JScrollPane scrollPane = 
-	    new JScrollPane(myArea,
+	    new JScrollPane(area,
 			    JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
 			    JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 	
@@ -27,8 +27,8 @@ public class GuiTextArea {
 
     //--------------------
     public void print(String s)   { 
-	myArea.append(s); 
-        myArea.setCaretPosition(myArea.getDocument().getLength());
+	area.append(s);
+        area.setCaretPosition(area.getDocument().getLength());
     }
     public void println(String s) { print(s+"\n"); }
     public void println()         { print("\n"); }
