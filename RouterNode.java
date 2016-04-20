@@ -158,7 +158,7 @@ public class RouterNode {
           if(table[i][j] >= RouterSimulator.INFINITY)
             str += f.format("   " + RouterSimulator.INFINITY + " | ", n);
           else
-            str += f.format("       " + table[i][j] + " | ", n);
+            str += f.format("       " + table[i][j] + " |  ", n);
         }
       }
       myGUI.println(str);
