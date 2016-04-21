@@ -27,11 +27,11 @@ public class RouterNode {
                   this.sendUpdate(new RouterPacket(myID, i, distVec));
               }
         }
-        initializeTable();
-        printGUIDistanceTable();
+        //initializeTable();
+        //printGUIDistanceTable();
   }
 
-  private void initializeTable(){
+  public void initializeTable(){
       for(int i = 0; i < RouterSimulator.NUM_NODES; i++)
       {
           table[i][myID] = costs[i];
@@ -70,7 +70,7 @@ public class RouterNode {
           table[i][pkt.sourceid] = pkt.mincost[i];
       }
 
-      int min;
+      int min = 999;
       // update distance vector
       for(int i = 0; i < RouterSimulator.NUM_NODES; i++){
           // skip when i equals myID (nodes have 0 distance to themselves)
@@ -92,9 +92,9 @@ public class RouterNode {
           if( table[i][myID] != min){
               updatedFlag = true;
               table[i][myID] = min;
+              System.out.println(myID + " to " + i + " min: " + min);
           }
       }
-
       int[] myDistVec = new int[RouterSimulator.NUM_NODES];
 
       // send distance vector update to neighbors
@@ -137,9 +137,9 @@ public class RouterNode {
 	  GUI.println("Current table for " + myID + "  at time " + simulator.getClocktime());
       String dispText = "node | "; //buffer string for storing formatted text to send to gui
       for(int i = 0; i < RouterSimulator.NUM_NODES; i++){
-          if(costs[i] != RouterSimulator.INFINITY){
+         // if(costs[i] != RouterSimulator.INFINITY){
               dispText += displayString.format("       " + i + " | ", spaces);
-          }
+         //}
       }
 
       GUI.println(dispText);
@@ -153,14 +153,14 @@ public class RouterNode {
       for(int i = 0; i < RouterSimulator.NUM_NODES; i++){
           dispText = displayString.format(i, spaces +2) + " | ";
           for(int j = 0; j < RouterSimulator.NUM_NODES; j++){
-                if(costs[j] != RouterSimulator.INFINITY){
+                //if(costs[j] != RouterSimulator.INFINITY){
                     if(table[i][j] >= RouterSimulator.INFINITY){
                         dispText += displayString.format("   " + RouterSimulator.INFINITY + " | ", spaces);
                     }
                     else{
                         dispText += displayString.format("       " + table[i][j] + " |  ", spaces);
                     }
-                }
+                //}
           }
           GUI.println(dispText);
       }

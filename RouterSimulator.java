@@ -22,7 +22,7 @@ public class RouterSimulator {
   public static final boolean LINKCHANGES = false;
   public static final boolean POISON = true;
 
-  public int TRACE = 1;             /* for debugging */
+  public int TRACE = 3;             /* for debugging */
 
   private GuiTextArea myGUI = null;
 
@@ -166,49 +166,55 @@ should not have to, and you defeinitely should not have to modify
      
       eventptr = evlist;            /* get next event to simulate */
       if (eventptr==null)
-	break;
+          break;
       evlist = evlist.next;        /* remove this event from event list */
       if (evlist!=null)
            evlist.prev=null;
-      if (TRACE>1) {
-	myGUI.println("MAIN: rcv event, t="+
+
+        if (TRACE>1) {
+          myGUI.println("MAIN: rcv event, t="+
 			   eventptr.evtime+ " at "+
 			   eventptr.eventity);
           if (eventptr.evtype == FROM_LAYER2 ) {
-	    myGUI.print(" src:"+eventptr.rtpktptr.sourceid);
-            myGUI.print(", dest:"+eventptr.rtpktptr.destid);
-            myGUI.println(", contents: "+ 
+              myGUI.print(" src:"+eventptr.rtpktptr.sourceid);
+              myGUI.print(", dest:"+eventptr.rtpktptr.destid);
+              myGUI.println(", contents: "+
               eventptr.rtpktptr.mincost[0]+" "+ eventptr.rtpktptr.mincost[1]+
 			       " "+
 			       eventptr.rtpktptr.mincost[2]+" "+ 
 			       eventptr.rtpktptr.mincost[3]);
             }
           }
-      clocktime = eventptr.evtime;    /* update time to next event time */
-      if (eventptr.evtype == FROM_LAYER2 ) {
-	if(eventptr.eventity >=0 && eventptr.eventity < NUM_NODES)
-	  nodes[eventptr.eventity].receiveUpdate(eventptr.rtpktptr);
-	else { myGUI.println("Panic: unknown event entity\n"); System.exit(0); }
-      }
-      else if (eventptr.evtype == LINK_CHANGE ) {
-	// change link costs here if implemented
-	nodes[eventptr.eventity].updateLinkCost(eventptr.dest,
+
+        clocktime = eventptr.evtime;    /* update time to next event time */
+
+        if (eventptr.evtype == FROM_LAYER2 ) {
+            if(eventptr.eventity >=0 && eventptr.eventity < NUM_NODES)
+                nodes[eventptr.eventity].receiveUpdate(eventptr.rtpktptr);
+            else { myGUI.println("Panic: unknown event entity\n"); System.exit(0); }
+        }
+        else if (eventptr.evtype == LINK_CHANGE ) {
+            // change link costs here if implemented
+            nodes[eventptr.eventity].updateLinkCost(eventptr.dest,
 						eventptr.cost);
-	nodes[eventptr.dest].updateLinkCost(eventptr.eventity,
+            nodes[eventptr.dest].updateLinkCost(eventptr.eventity,
 					    eventptr.cost);
-      }
-      else
-	{ myGUI.println("Panic: unknown event type\n"); System.exit(0); }
-      
-      if(TRACE > 2)
-	for(int i=0;i<NUM_NODES;i++)
-	  nodes[i].printGUIDistanceTable();
+        }
+        else {
+            myGUI.println("Panic: unknown event type\n"); System.exit(0); }
+
+        if(TRACE > 2)
+            for(int i=0;i<NUM_NODES;i++) {
+                nodes[i].initializeTable();
+                nodes[i].printGUIDistanceTable();
+            }
 
     }
-    
+
     
     myGUI.println("\nSimulator terminated at t="+clocktime+
 		       ", no packets in medium\n");
+
   }
 
   public double getClocktime() {
@@ -218,7 +224,7 @@ should not have to, and you defeinitely should not have to modify
   /********************* EVENT HANDLINE ROUTINES *******/
   /*  The next set of routines handle the event list   */
   /*****************************************************/
-  
+
 
   void insertevent(Event p){
     Event q,qold;
@@ -342,3 +348,5 @@ class  Event {
   Event prev;
   Event next;
 }
+
+
